@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikash patel Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        /* nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            
+        } */
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 0px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            font-size: 1.03rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 21px;
+            z-index: 101;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+            padding: 0 20px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .buttons {
+            padding: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .leftSection .btn {
+            padding: 12px 20px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .leftSection .btn:hover {
+            background-color: white;
+            color: #1e2167;
+        }
+
+        .rightSection img {
+            width: 80%;
+            max-width: 400px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+            min-height: 60px;
+            display: block;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+            padding: 40px 0;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+
+        .about {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .about h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            max-width: 100%;
+            border: 5px solid rgb(170, 107, 228);
+        }
+
+
+        .education {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .education h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .education-card {
+            background: rgb(18, 18, 62);
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .education-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: rgb(170, 107, 228);
+        }
+
+        .education-card h3 {
+            margin-bottom: 10px;
+            color: rgb(170, 107, 228);
+        }
+
+        .education-card p {
+            margin-bottom: 5px;
+        }
+
+
+        .skills {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .skills h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill-card {
+            background: rgb(18, 18, 62);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(170, 107, 228, 0.3);
+        }
+
+        .skill-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: rgb(170, 107, 228);
+        }
+
+        .skill-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+
+        .projects {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .projects h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgb(18, 18, 62);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #9c97f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-img a {
+            padding: 12px 30px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        div a:hover {
+            background-color: white;
+            color: #1e2167;
+        }
+
+
+        .contact {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .contact h1 {
+            font-size: 1.9rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgb(18, 18, 62);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form button {
+            padding: 12px 30px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: white;
+            color: #1e2167;
+        }
+
+
+        footer {
+            background-color: rgb(18, 18, 62);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 80vw;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .footer-social {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .footer-social a:hover {
+            color: rgb(170, 107, 228);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: rgb(170, 107, 228);
+        }
+
+    
+        @media screen and (max-width: 1200px) {
+            .firstSection {
+                flex-direction: column-reverse;
+                text-align: center;
+                margin: 40px 0;
+            }
+
+            .firstSection>div {
+                width: 80%;
+            }
+
+            .leftSection {
+                margin-top: 40px;
+                font-size: 2rem;
+            }
+
+            .leftSection .buttons {
+                justify-content: center;
+            }
+
+            .vertical {
+                margin: 0 60px;
+            }
+
+            .about-content,
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            nav {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background-color: rgb(18, 18, 62);
+                height: calc(100vh - 80px);
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 50px;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                z-index: 100;
+            }
+
+            nav ul li {
+                margin: 20px 0;
+            }
+
+            nav ul.active {
+                transform: translateX(0%);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .firstSection>div {
+                width: 90%;
+            }
+
+            .leftSection {
+                font-size: 1.8rem;
+            }
+
+            .leftSection .btn {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-image img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .education-card,
+            .skill-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                gap: 30px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .left {
+                font-size: 1.2rem;
+            }
+
+            .firstSection {
+                margin: 30px 0;
+                min-height: auto;
+            }
+
+            .leftSection {
+                font-size: 1.5rem;
+            }
+
+            .leftSection .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftSection .btn {
+                width: 200px;
+                margin: 5px 0;
+            }
+
+            .rightSection img {
+                width: 70%;
+                max-width: 250px;
+            }
+
+            .about,
+            .education,
+            .skills,
+            .projects,
+            .contact {
+                padding: 40px 0;
+            }
+
+            .about-content,
+            .education-container,
+            .skills-container,
+            .project-container {
+                padding: 0 10px;
+            }
+
+            .about-text,
+            .about-image,
+            .education-card,
+            .skill-card,
+            .project-content,
+            .contact-info,
+            .contact-form {
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
+            .skill-card {
+                padding: 15px;
+                min-height: 150px;
+            }
+
+            .skill-card i {
+                font-size: 30px;
+            }
+
+            .project-img a {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-logo {
+                text-align: center;
+            }
+
+            .footer-social a {
+                margin: 0 10px;
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            main hr {
+                margin: 40px 20px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .leftSection {
+                font-size: 1.3rem;
+            }
+
+            #element {
+                min-height: 80px;
+            }
+
+            .leftSection .btn {
+                font-size: 14px;
+            }
+
+            .about-image img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .education-card,
+            .skill-card {
+                padding: 20px 15px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 12px;
+            }
+
+            .contact-form button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Vikash patel Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Vikash Patel</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="my_resume.pdf" class="btn">Download Resume</a>
+                    <a href="https://github.com/vikashpatel0" class="btn">Visit Github</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="Gemini_Generated_Image_g50q7xg50q7xg50q.png" alt="Developer">
+            </div>
+        </section>
+        <hr>
+
+        <section id="about" class="about">
+            <h1 class="section-title">About Me</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate and driven B.Tech Computer Science and Engineering student at Jagannath
+                        University Jaipur, class of 2025. My academic journey has provided me with a strong foundation
+                        in software development principles, data structures, algorithms, and object-oriented
+                        programming.</p>
+                    <br>
+                    <p>I am learning Full-Stack Development,and enjoy turning complex problems into elegant, efficient
+                        code. I have applied my skills in various academic projects and am always eager to learn new
+                        technologies and frameworks.</p>
+
+                </div>
+                <div class="about-image">
+                    <img src="hlf.jpg" alt="About Me">
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h1 class="section-title">Education</h1>
+            <div class="education-container">
+                <div class="education-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>10th Grade (CBSE)</h3>
+                    <p>JS public school chaundali up</p>
+                    <p>2020 - 2021</p>
+                    <p>Percentage: 74.6%</p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>12th Grade (BSEB)</h3>
+                    <p>+2 High school Bhabua kaimur</p>
+                    <p>2021 - 2023</p>
+                    <p>Percentage: 70.2%</p>
+                </div>
+                <div class="education-card">
+                    <i class="fas fa-university"></i>
+                    <h3>B.Tech CSE</h3>
+                    <p>Jagannath University Jaipur</p>
+                    <p>2023 - Present</p>
+                    <p>Current CGPA: 7.81</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h1 class="section-title">My Skills</h1>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>Web Page Structure</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Styling & Design</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Web Interactivity</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React JS</h3>
+                    <p>Builds Interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <h3>PHP Basic</h3>
+                    <p>Server-side Scripting</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python Basic</h3>
+                    <p>Server-side Scripting</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java Basic</h3>
+                    <p>Programming Fundamentals</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL/MySQL</h3>
+                    <p>Database Management</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C++ Programming</h3>
+                    <p>Procedural Programming</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>MS Excel</h3>
+                    <p>Data Analysis & Visualization</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-word"></i>
+                    <h3>MS Word</h3>
+                    <p>Document Creation</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <h3>MS PowerPoint</h3>
+                    <p>Presentation Design</p>
+                </div>
+            </div>
+        </section>
+
+      <!-- <section id="projects" class="projects" 
+    style="padding:40px 0; background:#06061e;">
+
+    <h1 class="section-title" 
+        style="text-align:center; color:white; margin-bottom:25px; font-size:32px;">
+        My Projects
+    </h1>
+
+    <div class="project-container"
+        style="
+            display:flex; 
+            justify-content:center; 
+            gap:25px; 
+            flex-wrap:wrap;
+        "> -->
+
+        <section id="projects" class="projects" 
+    style="padding:40px 0; background:#06061e; white-space:nowrap; overflow-x:auto;">
+
+    <h1 class="section-title" 
+        style="text-align:center; color:white; margin-bottom:25px; font-size:32px;">
+        My Projects
+    </h1>
+
+    <div class="project-row" 
+        style="display:flex; gap:25px; white-space:nowrap;">
+
+        <!-- 1. Amazon Clone -->
+        <div class="project-card"
+            style="width:300px; display:inline-block; border-radius:12px; overflow:hidden; background:#0a0a34; color:white;">
+            
+            <div class="project-img"
+                style="
+                    background-image:url('https://codewithcurious.com/wp-content/uploads/2024/02/Handwritten-Notes-2024-09-10T052053.876.png.webp');
+                    background-size:cover;
+                    background-position:center;
+                    height:180px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                ">
+                <a href="http://127.0.0.1:5503/index.html" target="_blank"
+                    style="padding:10px 18px; background:rgba(0,0,0,0.6); border:2px solid white; 
+                    color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-content" style="padding:15px;">
+                <h3>Simple Amazon Clone</h3>
+                <p>Designed and implemented an online Amazon clone website.</p>
+            </div>
+        </div>
+
+
+        <!-- 2. Employee Management System -->
+        <div class="project-card"
+            style="width:300px; display:inline-block; border-radius:12px; overflow:hidden; background:#0a0a34; color:white;">
+            
+            <div class="project-img"
+                style="
+                    background-image:url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51');
+                    background-size:cover;
+                    background-position:center;
+                    height:180px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                ">
+                <a href="second project_coming soon.png" target="_blank"
+                    style="padding:10px 18px; background:rgba(0,0,0,0.6); border:2px solid white; 
+                    color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-content" style="padding:15px;">
+                <h3>Employee Management System</h3>
+                <p>Task assigning and employee progress tracking system.</p>
+            </div>
+        </div>
+
+
+        <!-- 3. Portfolio Generator -->
+        <div class="project-card"
+            style="width:300px; display:inline-block; border-radius:12px; overflow:hidden; background:#0a0a34; color:white;">
+            
+            <div class="project-img"
+                style="
+                    background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c');
+                    background-size:cover;
+                    background-position:center;
+                    height:180px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                ">
+                <a href="https://capable-fox-43928d.netlify.app/" target="_blank"
+                    style="padding:10px 18px; background:rgba(0,0,0,0.6); border:2px solid white; 
+                    color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-content" style="padding:15px;">
+                <h3>Automatic Portfolio Generator</h3>
+                <p>Portfolio generator with templates & full customization.</p>
+            </div>
+        </div>
+
+
+        <!-- 4. Blog App -->
+        <div class="project-card"
+            style="width:300px; display:inline-block; border-radius:12px; overflow:hidden; background:#0a0a34; color:white;">
+            
+            <div class="project-img"
+                style="
+                    background-image:url('https://images.unsplash.com/photo-1506765515384-028b60a970df');
+                    background-size:cover;
+                    background-position:center;
+                    height:180px;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                ">
+                <a href="second project_coming soon.png" target="_blank"
+                    style="padding:10px 18px; background:rgba(0,0,0,0.6); border:2px solid white; 
+                    color:white; text-decoration:none; border-radius:8px; font-weight:bold;">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-content" style="padding:15px;">
+                <h3>Blog App</h3>
+                <p>Users can write posts with login/signup system.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        
+
+        <section id="contact" class="contact">
+            <h1 class="section-title">Contact Me</h1>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>If you’re looking for a MERN or Full-Stack Web Developer who can turn ideas into clean, scalable and user-friendly digital solutions — I’d love to connect!.<br> Enjoy building modern web applications, solving real-world problems, and learning new technologies that improve user experience.
+
+Whether you have a project, an opportunity, or just want to say hi — feel free to reach out.
+I am always open to collaboration, freelancing, or internship roles.>
+                    <br>
+                    <p><i class="fas fa-envelope"></i> vp4373122@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9525545806</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jagannath University Jaipur</p>
+                </div>
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c0fdd260-944f-4019-8474-517fae9a7071">
+                        <input type="text" placeholder="Your Name" required name="name">
+                        <input type="email" placeholder="Your Email" required name="email">
+                        <textarea rows="5" placeholder="Your Message" required name="message"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Vikash patel Portfolio</h2>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/17FcYD44GV/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/patel_br_045?igsh=MWlwY2o1OWN1dG52eQ==&utm_source=ig_contact_invite"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://github.com/vikashpatel0"><i class="fab fa-github"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/vikash-patel-1a3727293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <i class="fab fa-linkedin-in"></i></a></div>
+            <div class="copyright">
+                <p>&copy; 2025 Vikash patel Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+
+                    
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        
+        var typed = new Typed('#element', {
+            strings: ['Database Administrator', 'Excel Expert', 'Web Developer'],
+            typeSpeed: 40,
+            backSpeed: 30,
+            loop: true
+        });
+
+        
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+
+            
+            if (navMenu.classList.contains("active")) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "auto";
+            }
+        });
+
+        document.querySelectorAll("nav ul li a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "auto";
+        }));
+
+        
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+</body>
+
+
+</html>
